@@ -13,3 +13,4 @@ async function conectaBancoDeDados() {
     console.log(erro);
   }
 }
+module.exports = conectaBancoDeDados;

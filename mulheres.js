@@ -1,5 +1,6 @@
 const express = require("express"); //AQUI ESTOU INICIANDO O EXPRESS
 const router = express.Router(); //AQUI ESTOU CONF A PRIMEIRA PARTE DA ROTA
+const cors = require("cors"); // aqui estou trazendo o pacote cors que permite consumir essa api no front-end
 
 const conectaBancoDeDados = require("./bancoDeDados"); //AQUI ESTOU LIGANDO O ARQUIVO AO BANCO DE DADOS
 conectaBancoDeDados(); //ESTOU CHAMANDO A FUNÇÃO QUE CONECTA O BANCO DE DADOS
