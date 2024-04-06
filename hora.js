@@ -1,25 +1,20 @@
-const express = require ("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
-const app = express()
-const porta = 333
+const app = express();
+const porta = 3333;
 
-function mostraHora(request, response)
- {
+function mostraHora(request, response) {
+  const data = new Date();
 
-    const data = new Date()
-   
-    const hora = data.toLocaleTimeString('pt-BR')
-   
-    response.send(hora)
-   
-   }
+  const hora = data.toLocaleTimeString("pt-BR");
 
-function mostraPorta()
-{
-console.log("Servidor criado e rodando na porta", porta)
+  response.send(hora);
 }
 
-app.use(router.get ('/hora', mostraHora))
-app.listen(porta,mostraPorta)
+function mostraPorta() {
+  console.log("Servidor criado e rodando na porta", porta);
+}
 
+app.use(router.get("/hora", mostraHora));
+app.listen(porta, mostraPorta);
