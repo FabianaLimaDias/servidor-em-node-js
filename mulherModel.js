@@ -1,25 +1,22 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 const MulherSchema = new mongoose.Schema({
-  nome: {
-    type: String,
-    required: true,
-  },
+    nome: {
+        type: String,
+        required: true
+    },
+    imagem: {
+        type: String,
+        required: true,
+    },
+    citacao: {
+        type:String,
+        required: true,
+    },
+    minibio: {
+        type: String,
+        required: true
+    }
+})
 
-  imagem: {
-    type: String,
-    required: true,
-  },
-
-  minibio: {
-    type: String,
-    required: true,
-  },
-
-  citacao: {
-    type: String,
-    require: true,
-  },
-});
-
-module.exports = mongoose.model("diva", MulherSchema);
+module.exports = mongoose.model('diva', MulherSchema)
