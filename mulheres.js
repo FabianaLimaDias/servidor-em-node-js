@@ -58,7 +58,8 @@ async function corrigiMulher(request, response) {
       mulherEncontrada.citacao = request.body.citacao;
     }
 
-    response.json(mulheres);
+    const mulheresAtualizadaNoBancoDeDados = await mulherEncontrada.save();
+    response.json(mulheresAtualizadaNoBancoDeDados);
   } catch (erro) {
     console.log(erro);
   }
